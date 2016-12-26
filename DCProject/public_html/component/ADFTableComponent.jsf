@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:componentDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs"
+                 componentVar="comp" definition="private"
+                 xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component"
+                 xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>AdfTableSample</afc:display-name>
+            <afc:component-extension>
+                <afc:component-tag-namespace>dc.component</afc:component-tag-namespace>
+                <afc:component-taglib-uri>http://adfwithejb.blogspot.com</afc:component-taglib-uri>
+            </afc:component-extension>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelCollection id="dc_pc1">
+        <f:facet name="menus"/>
+        <f:facet name="toolbar"/>
+        <f:facet name="statusbar"/>
+        <af:table var="row" rowBandingInterval="0" id="dc_t1">
+            <af:column sortable="false" headerText="col1" id="dc_c1">
+                <af:outputText value="#{row.col1}" id="dc_ot1"/>
+            </af:column>
+            <af:column sortable="false" headerText="col2" id="dc_c2">
+                <af:outputText value="#{row.col2}" id="dc_ot2"/>
+            </af:column>
+            <af:column sortable="false" headerText="col3" id="dc_c3">
+                <af:outputText value="#{row.col3}" id="dc_ot3"/>
+            </af:column>
+            <af:column sortable="false" headerText="col4" id="dc_c4">
+                <af:outputText value="#{row.col4}" id="dc_ot4"/>
+            </af:column>
+            <af:column sortable="false" headerText="col5" id="dc_c5">
+                <af:outputText value="#{row.col5}" id="dc_ot5"/>
+            </af:column>
+        </af:table>
+    </af:panelCollection>
+</af:componentDef>

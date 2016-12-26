@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dc="http://adfwithejb.blogspot.com">
+    <af:document title="PageWithTableComp.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top">
+                    <af:toolbar id="t1">
+                    </af:toolbar>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelSplitter id="ps1"
+                                      binding="#{backingBeanScope.SampleBackingBean.panelSplitterBinding}">
+                        <f:facet name="first">
+                            <dc:AdfTableSample id="ats1"/>
+                        </f:facet>
+                        <f:facet name="second">
+                            <dc:AdfTableSample id="dcs2"/>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>

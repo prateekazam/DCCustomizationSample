@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:componentDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs"
+                 componentVar="dcComp" definition="private"
+                 xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description/>
+            <afc:display-name>JSFDC</afc:display-name>
+            <afc:attribute>
+                <afc:attribute-name>backGroundColor</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+            </afc:attribute>
+            <afc:attribute>
+                <afc:attribute-name>visible</afc:attribute-name>
+                <afc:attribute-class>java.lang.Boolean</afc:attribute-class>
+                <afc:default-value>true</afc:default-value>
+            </afc:attribute>
+            <afc:component-extension>
+                <afc:component-tag-namespace>dc.component</afc:component-tag-namespace>
+                <afc:component-taglib-uri>http://adfwithejb.blogspot.com</afc:component-taglib-uri>
+            </afc:component-extension>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelGroupLayout id="dc_pgl1" inlineStyle="#{attrs.backGroundColor}"
+                         visible="#{attrs.visible}">
+        <af:outputText value="I Am inside Declarative component" id="dc_ot1"/>
+    </af:panelGroupLayout>
+</af:componentDef>

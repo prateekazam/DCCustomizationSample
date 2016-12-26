@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dc="http://adfwithejb.blogspot.com">
+    <af:document title="TestingSecond.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelStretchLayout id="psl1">
+                <f:facet name="start"/>
+                <f:facet name="end"/>
+                <f:facet name="top">
+                    <af:toolbar id="t1">
+                        <af:button text="Save" id="b1"
+                                   actionListener="#{backingBeanScope.SampleBackingBean.onClickMDSSecond}"/>
+                    </af:toolbar>
+                </f:facet>
+                <f:facet name="bottom"/>
+                <f:facet name="center">
+                    <af:panelSplitter id="ps1"
+                                      binding="#{backingBeanScope.SampleBackingBean.panelSplitterBinding}">
+                        <f:facet name="first">
+                            <dc:DCXhtml id="dcx111"
+                                        binding="#{backingBeanScope.SampleBackingBean.dcSampleBindingSecond}"/>
+                        </f:facet>
+                        <f:facet name="second">
+                            <dc:DCXhtml id="dcs2"/>
+                        </f:facet>
+                    </af:panelSplitter>
+                </f:facet>
+            </af:panelStretchLayout>
+        </af:form>
+    </af:document>
+</f:view>
